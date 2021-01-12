@@ -1,13 +1,14 @@
 {
-  "name": "tp02",
+  "name": "projet",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -20,8 +21,11 @@
     "@angular/platform-browser-dynamic": "10.0.9",
     "@angular/router": "10.0.9",
     "@ngxs/store": "^3.7.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
     "rxjs": "6.6.2",
     "tslib": "2.0.1",
+    "typescript": "~4.0.2",
     "zone.js": "0.10.3"
   },
   "devDependencies": {
@@ -32,6 +36,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -44,5 +49,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
+  },
+  "engines": {
+    "node": "14.12.0",
+    "npm": "6.14.8"
   }
 }
